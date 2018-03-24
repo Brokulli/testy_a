@@ -21,6 +21,7 @@ class WsbPlCheck(unittest.TestCase): # wykorzystywanie modulu TestCase z Unittes
         driver.get("http://www.wsb.pl") # wchodzimy na strone wsb
         self.assertIn(u"Wyższe Szkoły Bankowe", driver.title) # sprawdza czy cos jest w czyms
         # tutaj czy "Wyższe Szkoły Bankowe" jest w tytule strony
+        # u przed stringiem oznacza unikod
 
     def test_wsb_pl_2(self):
         driver = self.driver
