@@ -14,13 +14,11 @@ class WsbPlCheck(unittest.TestCase): # wykorzystywanie modulu TestCase z Unittes
     def setUp(self):
         self.driver = webdriver.Chrome() # otwieranie przegladarki
 
-
     # testy
     # tutaj: testy strony wsb
     def test_wsb_search_box_1(self):
-        driver = self.driver
         driver.get("http://www.wsb.pl") # wchodzimy na strone wsb
-        driver.find_element_by_id("edit-search-block-form--2")
+        driver.find_element_by_id("edit-search-block-form--2") # wyszukujemy element tu: id
 
     # bedzie wykonane po kazdym tescie
     def tearDown(self):

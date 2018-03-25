@@ -24,12 +24,17 @@ class WsbPlCheck(unittest.TestCase): # wykorzystywanie modulu TestCase z Unittes
         driver.find_element_by_tag_name("body") # wyszukujemy element
 
     def test_link(self):
-        driver = self.driver
+        driver = self.driver # musimy znow zdefiniowac
         link = self.driver.find_element_by_link_text("AKCEPTUJĘ")
         # wyszukujemy element po tekscie linku
         link.click()
-        self.driver.find_element_by_link_text("Studia podyplomowe")
-        sleep(3) # czeka chwile nim przejdzie dalej
+        sleep(3) # usypia na chwile, czeka nim przejdzie dalej
+        # jak zaimportowano sleep z modulu time (from time import sleep)
+        # jesli zaimportowano modul time jako calosc (import time)
+        # aby uzyc sleep nalezy napisac time.sleep()
+        self.driver.find_element_by_link_text("Studia podyplomowe").click()
+        # wyszukuje element po tekscie i klika w link
+        sleep(3)
 
     # instrukcje, ktore beda wykonane po kazdym tescie
     def tearDown(self):
