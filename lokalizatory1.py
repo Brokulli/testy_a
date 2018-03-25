@@ -33,6 +33,9 @@ class WsbPlCheck(unittest.TestCase): # wykorzystywanie modulu TestCase z Unittes
         # piszemy sleep() jesli zaimportowano sleep z modulu time (from time import sleep)
         # jesli zaimportowano modul time jako calosc (import time)
         # aby uzyc sleep nalezy napisac time.sleep()
+        # nie nalezy sleep uzywac w testach finalnych
+        # tester uzywa tego dla siebie aby zobaczyc na wlasne oczy
+        # jak pokolei tes przechodzi
         self.driver.find_element_by_link_text("Studia podyplomowe").click()
         # wyszukuje element po tekscie i klika w link
         sleep(3)
